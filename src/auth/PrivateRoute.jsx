@@ -21,17 +21,25 @@ export const PrivateRoute = ({
                 return (
                     <Layout style={{ height: "100vh" }}>
                         <SidebarContainer/>
-
                         <Layout>
                             <NavbarContainer/>
-                            <Content style={{
-                                margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280,
-                                }}
-                            >
-                                Content
-                            </Content>
+                            <Layout style={{ padding: '0 24px 24px' }}>
+                                <Breadcrumb style={{ marginTop: "20px" }}>
+                                    { Path ? 
+                                            <Breadcrumb.Item><span><Link to={Path}>{Breadcrumbs}</Link></span></Breadcrumb.Item>
+                                        : 
+                                            <Breadcrumb.Item><span>{Breadcrumbs}</span></Breadcrumb.Item>
+                                    }
+                                </Breadcrumb>
+                                <Content style={{
+                                    margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280,
+                                    }}
+                                >
+                                    <Component {...props}/>
+                                </Content>
+                            </Layout>
                             <Footer style={{ textAlign: 'center' }}>
-                                Ant Design ©2018 Created by Ant UED
+                                Dashboard ©2019 Created by Igor Costa
                             </Footer>
                         </Layout>
                     </Layout>

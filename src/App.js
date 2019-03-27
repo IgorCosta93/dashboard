@@ -6,12 +6,6 @@ import store from './store';
 import './App.css';
 import 'antd/dist/antd.css';
 import DashboardContainer from "./containers/Dashboard";
-
-import { Layout, Menu, Icon } from 'antd';
-const { Header, Sider, Content, Footer } = Layout;
-
-
-
 class App extends Component {
 
   state = {
