@@ -31,16 +31,20 @@ export const PrivateRoute = ({
                                             <Breadcrumb.Item><span>{Breadcrumbs}</span></Breadcrumb.Item>
                                     }
                                 </Breadcrumb>
-                                <Content style={{
-                                    margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280,
+                                <Content 
+                                    style={{
+                                        background: '#fff', 
+                                        padding: 24, 
+                                        marginTop: 10, 
+                                        marginLeft: 10,
+                                        marginRight: 10,
+                                        marginBottom: 25, 
+                                        minHeight: "auto" 
                                     }}
                                 >
                                     <Component {...props}/>
                                 </Content>
                             </Layout>
-                            <Footer style={{ textAlign: 'center' }}>
-                                Dashboard ©2019 Created by Igor Costa
-                            </Footer>
                         </Layout>
                     </Layout>
                 );

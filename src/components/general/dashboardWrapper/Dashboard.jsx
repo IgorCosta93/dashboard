@@ -1,7 +1,9 @@
 import React, { Fragment } from "react";
 import CardReport from "../../common/CardReport";
-import { Row, Icon, Typography } from 'antd';
-const { Title, Paragraph, Text } = Typography;
+import BarChart from "./charts/BarChart";
+import LineChart from "./charts/LineChart";
+import { Row, Icon, Typography, Col } from 'antd';
+const { Title } = Typography;
 
 function cardSales(){
     return (
@@ -28,12 +30,51 @@ function cardSalesFooter(){
 
 function Dashboard({ props }){
     return(
-        <CardReport
-            title={"Total de vendas"}
-            tooltip={"What do you want others to call you?"}
-            body={cardSales()}
-            footer={cardSalesFooter()}
-        />
+       <Fragment>
+            <Row>
+                <Col span={6}>
+                    <CardReport
+                        title={"Total de vendas"}
+                        tooltip={"What do you want others to call you?"}
+                        body={cardSales()}
+                        footer={cardSalesFooter()}
+                    /> 
+                </Col>
+                <Col span={6} >
+                    <CardReport
+                        title={"Total de vendas"}
+                        tooltip={"What do you want others to call you?"}
+                        body={cardSales()}
+                        footer={cardSalesFooter()}
+                    /> 
+                </Col>
+                <Col span={6}>
+                    <CardReport
+                        title={"Total de vendas"}
+                        tooltip={"What do you want others to call you?"}
+                        body={cardSales()}
+                        footer={cardSalesFooter()}
+                    /> 
+                </Col>
+                <Col span={6} >
+                    <CardReport
+                        title={"Total de vendas"}
+                        tooltip={"What do you want others to call you?"}
+                        body={cardSales()}
+                        footer={cardSalesFooter()}
+                    /> 
+                </Col>
+            </Row>
+                
+            <Row>
+                <Col span={11} style={{marginLeft: -50, marginTop: 30}}>
+                    <BarChart/>
+                </Col>
+                <Col span={11} style={{marginLeft: 60, marginTop: 30}}>
+                    <LineChart/>
+                </Col>
+            </Row>
+       </Fragment>
     )
 }
 

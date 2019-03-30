@@ -4,7 +4,7 @@ import { Card, Row, Col, Tooltip, Icon, Divider  } from 'antd';
 function CardReport({ title, tooltip, body, footer }){
     return(
         <Card
-            style={{ width: 300 }}
+            style={{ width: 280 }}
         >
             <Row>
                 <Col span={22}>
