@@ -3,6 +3,7 @@ import CardReport from "../../common/CardReport";
 import BarChart from "./charts/BarChart";
 import LineChart from "./charts/LineChart";
 import { Row, Icon, Typography, Col } from 'antd';
+import CardVisits from "./cards/CardVisits";
 const { Title } = Typography;
 
 function cardSales(){
@@ -41,12 +42,7 @@ function Dashboard({ props }){
                     /> 
                 </Col>
                 <Col span={6} >
-                    <CardReport
-                        title={"Total de vendas"}
-                        tooltip={"What do you want others to call you?"}
-                        body={cardSales()}
-                        footer={cardSalesFooter()}
-                    /> 
+                    <CardVisits/> 
                 </Col>
                 <Col span={6}>
                     <CardReport
