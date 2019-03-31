@@ -4,6 +4,8 @@ import BarChart from "./charts/BarChart";
 import LineChart from "./charts/LineChart";
 import { Row, Icon, Typography, Col } from 'antd';
 import CardVisits from "./cards/CardVisits";
+import CardPayments from "./cards/CardPayments";
+import CardIATF from "./cards/CardIATF";
 const { Title } = Typography;
 
 function cardSales(){
@@ -36,7 +38,7 @@ function Dashboard({ props }){
                 <Col span={6}>
                     <CardReport
                         title={"Total de vendas"}
-                        tooltip={"What do you want others to call you?"}
+                        tooltip={"Total de vendas no Ano"}
                         body={cardSales()}
                         footer={cardSalesFooter()}
                     /> 
@@ -45,20 +47,10 @@ function Dashboard({ props }){
                     <CardVisits/> 
                 </Col>
                 <Col span={6}>
-                    <CardReport
-                        title={"Total de vendas"}
-                        tooltip={"What do you want others to call you?"}
-                        body={cardSales()}
-                        footer={cardSalesFooter()}
-                    /> 
+                    <CardPayments/> 
                 </Col>
                 <Col span={6} >
-                    <CardReport
-                        title={"Total de vendas"}
-                        tooltip={"What do you want others to call you?"}
-                        body={cardSales()}
-                        footer={cardSalesFooter()}
-                    /> 
+                    <CardIATF/> 
                 </Col>
             </Row>
                 

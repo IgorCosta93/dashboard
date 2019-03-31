@@ -4,11 +4,10 @@ import {
   Geom,
   Axis,
   Tooltip,
-  Legend,
 } from "bizcharts";
 import CardReport from "../../../common/CardReport";
 import DataSet from "@antv/data-set";
-import { Row, Icon, Typography } from 'antd';
+import { Row, Typography } from 'antd';
 const { Title } = Typography;
 const padding = [5, 5, 10, 5];
 
@@ -62,6 +61,7 @@ const data = [
       Tokyo: 9.6,
     }
 ];
+
 const ds = new DataSet();
 const dv = ds.createView().source(data);
 dv.transform({
@@ -79,11 +79,11 @@ const cols = {
     }
 };
 
-function cardVisits(){
+function body(){
     return (
         <div style={{marginTop:-20}}>
             <Row style={{ marginTop: "5px" }}>
-                <Title level={2}>8,846</Title>
+                <Title level={2}>7,542</Title>
             </Row>
             <Chart 
                 animate={true}
@@ -113,32 +113,37 @@ function cardVisits(){
                 }}
             />
             <Geom
-                type="area"
+                type="interval"
                 position="month*temperature"
                 //size={2}
-                color={"city"}
-                shape={"smooth"}
+                color={"#4ecb73"}
+                adjust={[
+                    {
+                        type: "dodge",
+                        marginRatio: 1 / 32
+                    }
+                ]}
             />
             </Chart>
         </div>
     )
 }
 
-function cardVisitsFooter(){
+function footer(){
     return(
-        <p>Visitas diárias 1.234</p>
+        <p>Taxa de conversão 60%</p>
     )
 }
 
-function CardVisits({}){
+function CardPayments({}){
     return(
         <CardReport
-            title={"Total de Visitas"}
+            title={"Número de pagamentos"}
             tooltip={"What do you want others to call you?"}
-            body={cardVisits()}
-            footer={cardVisitsFooter()}
+            body={body()}
+            footer={footer()}
         /> 
     )
 }
 
-export default CardVisits;
+export default CardPayments;
