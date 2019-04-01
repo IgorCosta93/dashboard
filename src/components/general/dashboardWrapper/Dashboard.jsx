@@ -1,6 +1,9 @@
 import React, { Fragment } from "react";
 import BarChart from "./charts/BarChart";
+import BarChartHorizontal from "./charts/BarChartHorizontal";
 import LineChart from "./charts/LineChart";
+import IntervalStackChart from "./charts/IntervalStackChart";
+import PetalsChart from "./charts/PetalsChart";
 import { Row, Col } from 'antd';
 import CardVisits from "./cards/CardVisits";
 import CardPayments from "./cards/CardPayments";
@@ -36,11 +39,20 @@ function Dashboard({ props }){
             </Row>
 
             <Row>
-                <Col span={11} style={{marginLeft: -45, marginTop: 30}}>
-                    <LineChart/>
+                <Col span={10} style={{marginLeft: 0, marginTop: 30}}>
+                    <BarChartHorizontal/>
                 </Col>
                 <Col span={11} style={{marginLeft: 70, marginTop: 30}}>
-                    <BarChart/>
+                    <IntervalStackChart/>
+                </Col>
+            </Row>
+            
+            <Row>
+                <Col span={10} style={{marginLeft: 0, marginTop: 0}}>
+                    <PetalsChart/>
+                </Col>
+                <Col span={11} style={{marginLeft: 70, marginTop: 0}}>
+                    <LineChart/>
                 </Col>
             </Row>
  
