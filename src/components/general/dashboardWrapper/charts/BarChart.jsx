@@ -10,26 +10,26 @@ import {
 
 const data = [
     {
-      "name": "London",
-      "Jan.": 18.9,
-      "Feb.": 28.8,
-      "Mar.": 39.3,
-      "Apr.": 81.4,
-      "May": 47,
-      "Jun.": 20.3,
-      "Jul.": 24,
-      "Aug.": 35.6
+      "name": "Inseminados",
+      "Santo Antonio": 350,
+      "Jacutinga": 430,
+      "St. Marcos": 250,
+      "Paraiso": 540,
+      "São Vicente": 150,
+      "Água Santa": 320,
+      "São Francisco": 270,
+      "Chapecó": 340
     },
     {
-      "name": "Berlin",
-      "Jan.": 12.4,
-      "Feb.": 23.2,
-      "Mar.": 34.5,
-      "Apr.": 99.7,
-      "May": 52.6,
-      "Jun.": 35.5,
-      "Jul.": 37.4,
-      "Aug.": 42.4
+      "name": "PIA",
+      "Santo Antonio": 240,
+      "Jacutinga": 310,
+      "St. Marcos": 170,
+      "Paraiso": 350,
+      "São Vicente": 85,
+      "Água Santa": 240,
+      "São Francisco": 180,
+      "Chapecó": 260
     }
 ];
 
@@ -37,7 +37,7 @@ const ds = new DataSet();
 const dv = ds.createView().source(data);
     dv.transform({
       type: "fold",
-      fields: ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug."],
+      fields: ["Santo Antonio", "Jacutinga", "St. Marcos", "Paraiso", "São Vicente", "Água Santa", "São Francisco", "Chapecó"],
       // 展开字段集
       key: "月份",
       // key字段
@@ -47,7 +47,7 @@ const dv = ds.createView().source(data);
 function BarChart({}){
     return(
         <div>
-            <Chart height={400} data={dv} forceFit>
+            <Chart height={450} data={dv} forceFit>
             <Axis name="月份" />
             <Axis name="月均降雨量" />
             <Legend />

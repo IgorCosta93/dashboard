@@ -1,47 +1,19 @@
 import React, { Fragment } from "react";
-import CardReport from "../../common/CardReport";
 import BarChart from "./charts/BarChart";
 import LineChart from "./charts/LineChart";
-import { Row, Icon, Typography, Col } from 'antd';
+import { Row, Col } from 'antd';
 import CardVisits from "./cards/CardVisits";
 import CardPayments from "./cards/CardPayments";
 import CardIATF from "./cards/CardIATF";
-const { Title } = Typography;
-
-function cardSales(){
-    return (
-        <Fragment>
-            <Row style={{ marginTop: "5px" }}>
-                <Title level={2}>R$ 280.000</Title>
-            </Row>
-
-            <Row style={{ marginTop: "-12px" }}>
-                <p>12% ano-a-ano <Icon type="caret-up" style={{ marginLeft: "5px", color: "green"}}/></p>
-            </Row>
-            <Row style={{ marginTop: "-10px" }}>
-                <p>11% em uma base dia-a-dia <Icon type="caret-down" style={{ marginLeft: "5px", color: "red"}}/></p>
-            </Row>
-        </Fragment>
-    )
-}
-
-function cardSalesFooter(){
-    return(
-        <p>Vendas médias diárias ¥ 12,423</p>
-    )
-}
+import CardPregnancy from "./cards/CardPregnancy";
+import Map from "../../common/Map";
 
 function Dashboard({ props }){
     return(
        <Fragment>
             <Row>
-                <Col span={6}>
-                    <CardReport
-                        title={"Total de vendas"}
-                        tooltip={"Total de vendas no Ano"}
-                        body={cardSales()}
-                        footer={cardSalesFooter()}
-                    /> 
+                <Col span={6} style={{marginRight: 0}}>
+                    <CardPregnancy/> 
                 </Col>
                 <Col span={6} >
                     <CardVisits/> 
@@ -55,13 +27,23 @@ function Dashboard({ props }){
             </Row>
                 
             <Row>
-                <Col span={11} style={{marginLeft: -50, marginTop: 30}}>
+                <Col span={12} style={{marginLeft: 0, marginTop: 30}}>
+                    <Map/>
+                </Col>
+                <Col span={11} style={{marginLeft: -40, marginTop: 30}}>
                     <BarChart/>
                 </Col>
-                <Col span={11} style={{marginLeft: 60, marginTop: 30}}>
+            </Row>
+
+            <Row>
+                <Col span={11} style={{marginLeft: -45, marginTop: 30}}>
                     <LineChart/>
                 </Col>
+                <Col span={11} style={{marginLeft: 70, marginTop: 30}}>
+                    <BarChart/>
+                </Col>
             </Row>
+ 
        </Fragment>
     )
 }

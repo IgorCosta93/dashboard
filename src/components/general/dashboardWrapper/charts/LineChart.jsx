@@ -90,7 +90,7 @@ const cols = {
 function LineChart({}){
     return(
         <div>
-            <Chart height={400} data={dv} scale={cols} forceFit>
+            <Chart height={450} data={dv} scale={cols} forceFit>
             <Legend />
             <Axis name="month" />
             <Axis

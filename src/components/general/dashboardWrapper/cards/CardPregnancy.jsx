@@ -4,64 +4,64 @@ import {
   Geom,
   Axis,
   Tooltip,
-  Legend,
 } from "bizcharts";
 import CardReport from "../../../common/CardReport";
 import DataSet from "@antv/data-set";
-import { Row, Icon, Typography } from 'antd';
+import { Row, Typography, Icon } from 'antd';
 const { Title } = Typography;
 const padding = [5, 5, 10, 5];
 
 const data = [
     {
-      month: "Jan",
-      Tokyo: 2.75,
+      month: "Janeiro",
+      Tokyo: 425,
     },
     {
-      month: "Feb",
-      Tokyo: 3,
+      month: "Fevereiro",
+      Tokyo: 406,
     },
     {
-      month: "Mar",
-      Tokyo: 2.75,
+      month: "Março",
+      Tokyo: 389,
     },
     {
-      month: "Apr",
-      Tokyo: 2.50,
+      month: "Abril",
+      Tokyo: 542,
     },
     {
-      month: "May",
-      Tokyo: 2.50,
+      month: "Maio",
+      Tokyo: 478,
     },
     {
-      month: "Jun",
-      Tokyo: 2.75,
+      month: "Junho",
+      Tokyo: 300,
     },
     {
-      month: "Jul",
-      Tokyo: 3,
+      month: "Julho",
+      Tokyo: 350,
     },
     {
-      month: "Aug",
-      Tokyo: 3.25,
+      month: "Agosto",
+      Tokyo: 398,
     },
     {
-      month: "Sep",
-      Tokyo: 3.50,
+      month: "Setembro",
+      Tokyo: 450,
     },
     {
-      month: "Oct",
-      Tokyo: 3.75,
+      month: "Outubro",
+      Tokyo: 470,
     },
     {
-      month: "Nov",
-      Tokyo: 3.50,
+      month: "Novembro",
+      Tokyo: 420,
     },
     {
-      month: "Dec",
-      Tokyo: 3,
+      month: "Dezembro",
+      Tokyo: 400,
     }
 ];
+
 const ds = new DataSet();
 const dv = ds.createView().source(data);
 dv.transform({
@@ -70,7 +70,7 @@ dv.transform({
     // 展开字段集
     key: "city",
     // key字段
-    value: "temperature" // value字段
+    value: "Animais" // value字段
 });
 
 const cols = {
@@ -79,11 +79,11 @@ const cols = {
     }
 };
 
-function cardVisits(){
+function body(){
     return (
-        <div style={{marginTop:-20, marginLeft: -5, width:"90%"}}>
+        <div style={{marginTop:-20, width:"87%"}}>
             <Row style={{ marginTop: "5px" }}>
-                <Title level={2}>3.25</Title>
+                <Title level={2}>81,72%</Title>
             </Row>
             <Chart 
                 animate={true}
@@ -101,7 +101,7 @@ function cardVisits(){
                 grid={false}
             />
             <Axis
-                name="temperature"
+                name="Animais"
                 label={false}
                 line={false}
                 tickLine={false}
@@ -113,32 +113,37 @@ function cardVisits(){
                 }}
             />
             <Geom
-                type="area"
-                position="month*temperature"
+                type="interval"
+                position="month*Animais"
                 //size={2}
-                color={"city"}
-                shape={"smooth"}
+                color={"#9760E3"}
+                adjust={[
+                    {
+                        type: "dodge",
+                        marginRatio: 1 / 32
+                    }
+                ]}
             />
             </Chart>
-        </div>
+      </div>
     )
 }
 
-function cardVisitsFooter(){
+function footer(){
     return(
-        <p>Melhor mês 3.5</p>
+        <p>5,4% ano<Icon type="caret-up" style={{ marginLeft: "5px", color: "green"}}/></p>
     )
 }
 
-function CardVisits({}){
+function CardPregnancy({}){
     return(
         <CardReport
-            title={"ECC Médio"}
-            tooltip={"ECC médio ao longo do ano"}
-            body={cardVisits()}
-            footer={cardVisitsFooter()}
+            title={"Prenhez Final"}
+            tooltip={"Porcentagem de Vacas Prenhaz ao Final da Estação"}
+            body={body()}
+            footer={footer()}
         /> 
     )
 }
 
-export default CardVisits;
+export default CardPregnancy;

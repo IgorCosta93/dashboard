@@ -7,58 +7,58 @@ import {
 } from "bizcharts";
 import CardReport from "../../../common/CardReport";
 import DataSet from "@antv/data-set";
-import { Row, Typography } from 'antd';
+import { Row, Typography, Icon } from 'antd';
 const { Title } = Typography;
 const padding = [5, 5, 10, 5];
 
 const data = [
     {
-      month: "Jan",
-      Tokyo: 23,
+      month: "Janeiro",
+      Tokyo: 425,
     },
     {
-      month: "Feb",
-      Tokyo: 26,
+      month: "Fevereiro",
+      Tokyo: 406,
     },
     {
-      month: "Mar",
-      Tokyo: 22,
+      month: "Março",
+      Tokyo: 389,
     },
     {
-      month: "Apr",
-      Tokyo: 21,
+      month: "Abril",
+      Tokyo: 542,
     },
     {
-      month: "May",
-      Tokyo: 25,
+      month: "Maio",
+      Tokyo: 478,
     },
     {
-      month: "Jun",
-      Tokyo: 15,
+      month: "Junho",
+      Tokyo: 300,
     },
     {
-      month: "Jul",
-      Tokyo: 20,
+      month: "Julho",
+      Tokyo: 350,
     },
     {
-      month: "Aug",
-      Tokyo: 26.5,
+      month: "Agosto",
+      Tokyo: 398,
     },
     {
-      month: "Sep",
-      Tokyo: 23.3,
+      month: "Setembro",
+      Tokyo: 450,
     },
     {
-      month: "Oct",
-      Tokyo: 18.3,
+      month: "Outubro",
+      Tokyo: 470,
     },
     {
-      month: "Nov",
-      Tokyo: 22,
+      month: "Novembro",
+      Tokyo: 420,
     },
     {
-      month: "Dec",
-      Tokyo: 9.6,
+      month: "Dezembro",
+      Tokyo: 400,
     }
 ];
 
@@ -70,7 +70,7 @@ dv.transform({
     // 展开字段集
     key: "city",
     // key字段
-    value: "temperature" // value字段
+    value: "Animais" // value字段
 });
 
 const cols = {
@@ -81,9 +81,9 @@ const cols = {
 
 function body(){
     return (
-        <div style={{marginTop:-20}}>
+        <div style={{marginTop:-20, width:"87%"}}>
             <Row style={{ marginTop: "5px" }}>
-                <Title level={2}>7,542</Title>
+                <Title level={2}>5,542</Title>
             </Row>
             <Chart 
                 animate={true}
@@ -101,7 +101,7 @@ function body(){
                 grid={false}
             />
             <Axis
-                name="temperature"
+                name="Animais"
                 label={false}
                 line={false}
                 tickLine={false}
@@ -114,7 +114,7 @@ function body(){
             />
             <Geom
                 type="interval"
-                position="month*temperature"
+                position="month*Animais"
                 //size={2}
                 color={"#4ecb73"}
                 adjust={[
@@ -125,21 +125,21 @@ function body(){
                 ]}
             />
             </Chart>
-        </div>
+      </div>
     )
 }
 
 function footer(){
     return(
-        <p>Taxa de conversão 60%</p>
+      <p>3,7% ano<Icon type="caret-down" style={{ marginLeft: "5px", color: "red"}}/></p>
     )
 }
 
 function CardPayments({}){
     return(
         <CardReport
-            title={"Número de pagamentos"}
-            tooltip={"What do you want others to call you?"}
+            title={"Animais Inseminados"}
+            tooltip={"Numero de Animais Inseminados"}
             body={body()}
             footer={footer()}
         /> 

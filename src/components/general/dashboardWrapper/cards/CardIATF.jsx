@@ -40,7 +40,7 @@ dv.transform({
 
 function body(){
     return (
-        <div style={{marginTop:-20}}>
+        <div style={{marginTop:-20, marginLeft:-5, width:"90%"}}>
             <Row style={{ marginTop: "5px" }}>
                 <Title level={2}>75%</Title>
             </Row>
