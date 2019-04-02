@@ -52,7 +52,7 @@ const data = [
 
 function PetalsChart({}){
     return (
-        <div>
+        <div style={{marginLeft: -100, width: "95%"}}>
           <Chart height={400} data={data} padding="auto" forceFit>
             <Coord type="polar" />
             <Tooltip />

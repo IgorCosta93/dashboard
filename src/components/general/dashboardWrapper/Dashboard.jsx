@@ -4,12 +4,12 @@ import BarChartHorizontal from "./charts/BarChartHorizontal";
 import LineChart from "./charts/LineChart";
 import IntervalStackChart from "./charts/IntervalStackChart";
 import PetalsChart from "./charts/PetalsChart";
-import { Row, Col } from 'antd';
 import CardVisits from "./cards/CardVisits";
 import CardPayments from "./cards/CardPayments";
 import CardIATF from "./cards/CardIATF";
 import CardPregnancy from "./cards/CardPregnancy";
 import Map from "../../common/Map";
+import { Row, Col, Card  } from 'antd';
 
 function Dashboard({ props }){
     return(
@@ -31,28 +31,40 @@ function Dashboard({ props }){
                 
             <Row>
                 <Col span={12} style={{marginLeft: 0, marginTop: 30}}>
-                    <Map/>
+                    <Card title="Mapa" bordered={false} style={{ width: "97%" }}>
+                        <Map/>
+                    </Card>
                 </Col>
-                <Col span={11} style={{marginLeft: -40, marginTop: 30}}>
-                    <BarChart/>
+                <Col span={12} style={{marginLeft: 0, marginTop: 30}}>
+                    <Card title="Fazendas" bordered={false} style={{ width: "97%" }}>
+                        <BarChart/>
+                    </Card>
                 </Col>
             </Row>
 
             <Row>
-                <Col span={10} style={{marginLeft: 0, marginTop: 30}}>
-                    <BarChartHorizontal/>
+                <Col span={12} style={{marginLeft: 0, marginTop: 30}}>
+                    <Card title="Colaboradores" bordered={false} style={{ width: "97%" }}>
+                        <BarChartHorizontal/>
+                    </Card>
                 </Col>
-                <Col span={11} style={{marginLeft: 70, marginTop: 30}}>
-                    <IntervalStackChart/>
+                <Col span={12} style={{marginLeft: 0, marginTop: 30}}>
+                    <Card title="Touros" bordered={false} style={{ width: "97%" }}>
+                        <IntervalStackChart/>
+                    </Card>
                 </Col>
             </Row>
             
             <Row>
-                <Col span={10} style={{marginLeft: 0, marginTop: 0}}>
-                    <PetalsChart/>
+                <Col span={12} style={{marginLeft: 0, marginTop: 0}}>
+                    <Card title="Categoria" bordered={false} style={{ width: "97%" }}>
+                        <PetalsChart/>
+                    </Card>
                 </Col>
-                <Col span={11} style={{marginLeft: 70, marginTop: 0}}>
-                    <LineChart/>
+                <Col span={12} style={{marginLeft: 0, marginTop: 0}}>
+                    <Card title="Categoria" bordered={false} style={{ width: "97%" }}>
+                        <LineChart/>
+                    </Card>
                 </Col>
             </Row>
  

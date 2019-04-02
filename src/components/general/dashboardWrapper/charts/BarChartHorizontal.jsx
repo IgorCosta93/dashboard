@@ -49,7 +49,7 @@ dv.transform({
 
 function BarChartHorizontal({ }){
     return(
-        <div>
+        <div style={{width: "89%"}}>
         <Chart height={450} data={dv} forceFit>
           <Legend />
           <Coord transpose scale={[1, -1]} />
