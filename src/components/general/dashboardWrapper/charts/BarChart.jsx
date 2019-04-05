@@ -46,7 +46,7 @@ const dv = ds.createView().source(data);
 
 function BarChart({}){
     return(
-        <div style={{marginLeft: -50, width: "95%"}}>
+        <div style={{marginLeft: -50 }}>
             <Chart height={400} data={dv} forceFit>
             <Axis name="月份" />
             <Axis name="月均降雨量" />

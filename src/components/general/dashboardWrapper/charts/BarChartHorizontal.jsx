@@ -41,15 +41,13 @@ const dv = ds.createView().source(data);
 dv.transform({
     type: "fold",
     fields: ["Inseminados", "PIA"],
-    // 展开字段集
     key: "type",
-    // key字段
-    value: "value" // value字段
+    value: "value" 
 });
 
 function BarChartHorizontal({ }){
     return(
-        <div style={{width: "89%"}}>
+        <div>
         <Chart height={450} data={dv} forceFit>
           <Legend />
           <Coord transpose scale={[1, -1]} />

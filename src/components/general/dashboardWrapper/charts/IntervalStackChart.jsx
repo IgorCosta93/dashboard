@@ -58,12 +58,12 @@ const cols = {
 
 function IntervalStackChart({  }){
     return(
-        <div style={{marginLeft: -100}}>
+        <div style={{marginLeft: -0}}>
         <Chart
           height={400}
           data={dv}
           scale={cols}
-          padding={[0, 100, 0, 100]}
+          padding={[0, 0, 0, 0]}
           forceFit
         >
           <Coord type={"theta"} radius={0.75} innerRadius={0.6} />

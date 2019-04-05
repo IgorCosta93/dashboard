@@ -6,6 +6,7 @@ import store from './store';
 import './App.css';
 import 'antd/dist/antd.css';
 import DashboardContainer from "./containers/Dashboard";
+import ReportContainer from "./containers/Report";
 class App extends Component {
 
   state = {
@@ -24,6 +25,7 @@ class App extends Component {
         <BrowserRouter>
             <Switch>      
               <PrivateRoute exact path="/" component={DashboardContainer} breadcrumb="Painel de Controle"/>
+              <PrivateRoute exact path="/relatorios" component={ReportContainer} breadcrumb="Relatórios"/>
               <Redirect to="/"/>
             </Switch>
           </BrowserRouter>

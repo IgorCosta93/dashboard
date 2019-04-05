@@ -81,7 +81,7 @@ const cols = {
 
 function cardVisits(){
     return (
-        <div style={{marginTop:-20, marginLeft: -5, width:"90%"}}>
+        <div style={{marginTop:-20, marginLeft: -5}}>
             <Row style={{ marginTop: "5px" }}>
                 <Title level={2}>3.25</Title>
             </Row>

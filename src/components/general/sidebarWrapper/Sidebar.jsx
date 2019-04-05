@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Layout, Menu, Icon } from 'antd';
+import { Link } from 'react-router-dom';
 const { Header, Sider, Content, Footer } = Layout;
 
 function Sidebar({ props }){
@@ -14,12 +15,16 @@ function Sidebar({ props }){
             <div className="logo" />
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
             <Menu.Item key="1">
-                <Icon type="home" />
-                <span>Dashboard</span>
+                <Link to="/">
+                    <Icon type="home" />
+                    <span>Dashboard</span>
+                </Link>
             </Menu.Item>
             <Menu.Item key="2">
-                <Icon type="area-chart" />
-                <span>Relatórios</span>
+                <Link to="/relatorios">
+                    <Icon type="area-chart" />
+                    <span>Relatórios</span>
+                </Link>
             </Menu.Item>
             <Menu.Item key="3">
                 <Icon type="setting" />

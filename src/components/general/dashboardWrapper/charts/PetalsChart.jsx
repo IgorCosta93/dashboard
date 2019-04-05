@@ -1,18 +1,10 @@
 import React from "react";
 import {
-    G2,
     Chart,
     Geom,
-    Axis,
     Tooltip,
     Coord,
-    Label,
-    Legend,
-    View,
-    Guide,
-    Shape,
-    Facet,
-    Util
+    Legend
 } from "bizcharts";
 
 const data = [
@@ -52,7 +44,7 @@ const data = [
 
 function PetalsChart({}){
     return (
-        <div style={{marginLeft: -100, width: "95%"}}>
+        <div style={{marginLeft: -100}}>
           <Chart height={400} data={data} padding="auto" forceFit>
             <Coord type="polar" />
             <Tooltip />

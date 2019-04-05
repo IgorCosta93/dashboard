@@ -81,7 +81,7 @@ const cols = {
 
 function body(){
     return (
-        <div style={{marginTop:-20, width:"87%"}}>
+        <div style={{marginTop:-20}}>
             <Row style={{ marginTop: "5px" }}>
                 <Title level={2}>81,72%</Title>
             </Row>
